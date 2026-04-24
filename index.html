@@ -285,6 +285,13 @@
   .section-title span {
     color: var(--blue);
   }
+  .section-copy {
+    max-width: 760px;
+    margin: -24px 0 48px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-dim);
+  }
 
   /* EXPERIENCE */
   .exp-item {
@@ -448,6 +455,124 @@
     color: var(--text-dim);
     letter-spacing: 0.05em;
     border-radius: 2px;
+  }
+  .github-subsection {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+  .github-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--blue-bright);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .github-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(24px, 3.2vw, 40px);
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .github-copy {
+    max-width: 760px;
+    color: var(--text-dim);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+  .github-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 768px) {
+    .github-grid { grid-template-columns: 1fr; }
+  }
+  .github-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 24px;
+    transition: all 0.3s;
+  }
+  .github-card:hover {
+    border-color: var(--blue);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(77, 142, 255, 0.12);
+  }
+  .github-card-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: start;
+    margin-bottom: 12px;
+  }
+  .github-card-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.1em;
+  }
+  .github-card-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.12;
+    margin-bottom: 8px;
+  }
+  .github-card-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--blue-bright);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .github-card-desc {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 18px;
+  }
+  .github-card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    align-items: center;
+  }
+  .github-card-links a {
+    color: var(--blue-bright);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .github-card-links a:hover {
+    color: var(--cyan);
+  }
+  .repo-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+  }
+  .repo-chips a {
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    border: 1px solid var(--line);
+    padding: 7px 10px;
+    background: rgba(77, 142, 255, 0.04);
+    transition: all 0.2s;
+  }
+  .repo-chips a:hover {
+    color: var(--blue-bright);
+    border-color: var(--blue);
   }
 
   /* STACK */
@@ -744,7 +869,7 @@
 
   <div class="hero-grid">
     <p class="hero-bio">
-      Senior Data Scientist focused on AI/ML, GenAI systems, and predictive modeling. I build end-to-end machine learning solutions — from time-series forecasting to NLP and LLM-powered natural language interfaces — turning data into automated, intelligent decisions.
+      Senior Data Scientist building AI, forecasting, NLP, and GenAI systems for real business decisions. My strongest work lives in industry settings: enterprise pricing, executive analytics, credit risk, market prediction, and natural-language access to production data.
     </p>
     <div class="hero-meta">
       <div>📍 <span>Denver, Colorado</span></div>
@@ -856,7 +981,10 @@
     <span class="num">// 02 — SELECTED_WORK</span>
     <span class="line"></span>
   </div>
-  <h2 class="section-title reveal">Things I've built<span>.</span></h2>
+  <h2 class="section-title reveal">Industry work first<span>.</span></h2>
+  <p class="section-copy reveal">
+    These are the projects that best represent the level I work at professionally. Public GitHub repositories matter, but they are supporting proof below — not the center of the story.
+  </p>
 
   <div class="projects">
     <div class="project reveal">
@@ -909,6 +1037,75 @@
       <div class="project-stack">
         <span>FinBERT</span><span>PyTorch</span><span>Python</span><span>NLP</span>
       </div>
+    </div>
+  </div>
+
+  <div class="github-subsection reveal">
+    <div class="github-kicker">// Public GitHub Work</div>
+    <h3 class="github-title">Selected repositories that support the portfolio.</h3>
+    <p class="github-copy">
+      These repos are public and reviewable today. They complement the industry work above, especially the projects I have already cleaned up into more production-ready structures.
+    </p>
+
+    <div class="github-grid">
+      <div class="github-card">
+        <div class="github-card-head">
+          <div class="github-card-id">[GH-01] · REFRESHED</div>
+          <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </div>
+        <div class="github-card-name">Beijing AQI Prediction</div>
+        <div class="github-card-tag">Machine Learning · Custom Models</div>
+        <p class="github-card-desc">Refactored from notebook format into a reusable package with custom regression and classification models, reproducible data setup, tests, and CI.</p>
+        <div class="github-card-links">
+          <a href="https://github.com/Ayush210895/Beijing-AQI-Prediction" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+
+      <div class="github-card">
+        <div class="github-card-head">
+          <div class="github-card-id">[GH-02] · REFRESHED</div>
+          <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </div>
+        <div class="github-card-name">Amazon Recommendation System</div>
+        <div class="github-card-tag">Recommenders · From Scratch</div>
+        <p class="github-card-desc">Production-style package around your original notebook, with custom popularity, KNN, and SVD recommenders, reproducible training, tests, and CI.</p>
+        <div class="github-card-links">
+          <a href="https://github.com/Ayush210895/Amazon-Recommendation-System" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+
+      <div class="github-card">
+        <div class="github-card-head">
+          <div class="github-card-id">[GH-03] · REFRESHED</div>
+          <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </div>
+        <div class="github-card-name">Human Activity Monitoring</div>
+        <div class="github-card-tag">Time Series · Complexity Analysis</div>
+        <p class="github-card-desc">Reusable Python package for visibility graphs, permutation entropy, graph metrics, and analysis scripts, while preserving the original notebook and raw data.</p>
+        <div class="github-card-links">
+          <a href="https://github.com/Ayush210895/Human-Activity-Monitoring" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+
+      <div class="github-card">
+        <div class="github-card-head">
+          <div class="github-card-id">[GH-04] · NEXT UP</div>
+          <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </div>
+        <div class="github-card-name">Space Race Visualisation</div>
+        <div class="github-card-tag">Visualization · Public Repo</div>
+        <p class="github-card-desc">Strong public visualization project already on GitHub and a good candidate for the next cleanup pass and stronger portfolio presentation.</p>
+        <div class="github-card-links">
+          <a href="https://github.com/Ayush210895/Space-Race-Visualisation" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="repo-chips">
+      <a href="https://github.com/Ayush210895/Clustering" target="_blank" rel="noopener">Clustering</a>
+      <a href="https://github.com/Ayush210895/Linear-Regression" target="_blank" rel="noopener">Linear Regression</a>
+      <a href="https://github.com/Ayush210895/Logistic-Regression" target="_blank" rel="noopener">Logistic Regression</a>
+      <a href="https://github.com/Ayush210895/Naive-Bayes" target="_blank" rel="noopener">Naive Bayes</a>
     </div>
   </div>
 </section>
