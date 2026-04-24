@@ -735,6 +735,38 @@
     color: var(--blue-bright);
     margin-bottom: 16px;
   }
+  .contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .resume-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border: 1px solid var(--blue);
+    color: var(--blue-bright);
+    background: rgba(77, 142, 255, 0.06);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .resume-cta:hover {
+    background: rgba(77, 142, 255, 0.12);
+    border-color: var(--cyan);
+    color: var(--cyan);
+    transform: translateY(-2px);
+  }
+  .resume-cta svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
   .contact-head {
     font-family: 'Fraunces', serif;
     font-weight: 300;
@@ -936,10 +968,10 @@
         <div class="exp-company">EchoStar Corporation</div>
         <div class="exp-role">Senior Data Scientist · prev. Sr. Data Analyst</div>
         <ul class="exp-bullets">
-          <li>Architecting ML models for forecasting, price elasticity, and ROI optimization — driving multi-million-dollar business impact</li>
-          <li>Key contributor on GenAI data access layer using Snowflake Cortex + Databricks Genie, enabling natural-language queries over enterprise data</li>
-          <li>Built executive analytics platform (Tableau + Snowflake) with advanced LOD calculations and ML-driven prediction metrics that accelerated decision-making by 30%</li>
-          <li>Automated end-to-end data pipelines reducing manual reporting effort by 40% and enabling near real-time inventory visibility</li>
+          <li>Built forecasting, price-elasticity, and ROI optimization models supporting pricing decisions across 3,000+ retail locations and contributing to multi-million-dollar business impact</li>
+          <li>Developed Databricks-hosted GenAI agents and Snowflake Cortex workflows for natural-language access to enterprise data, reducing analytics turnaround by 70%</li>
+          <li>Improved forecast accuracy by 10-15% through feature engineering, model redesign, and production-grade analytics for executive planning</li>
+          <li>Resolved KPI and reporting data-quality issues to restore 100% reporting accuracy and automated pipelines for near real-time business visibility</li>
         </ul>
       </div>
     </div>
@@ -969,10 +1001,10 @@
         <div class="exp-company">UBS</div>
         <div class="exp-role">Data Scientist · Quant Research & NLP/AI</div>
         <ul class="exp-bullets">
-          <li>Built XGBoost quant model on rolling time-series — 62.4% hit rate in weekly bond market predictions</li>
-          <li>Built FinBERT-based sentiment system (87% accuracy) feeding credit risk and investment frameworks</li>
-          <li>Improved global mutual fund forecasting accuracy by 33% via feature engineering on Bloomberg datasets</li>
-          <li>Automated Bloomberg data ingestion pipelines, cutting manual effort by 70%</li>
+          <li>Built XGBoost market-prediction pipelines on Bloomberg time-series data, reaching a 62.4% weekly hit rate for bond-market forecasting</li>
+          <li>Developed a FinBERT-based sentiment engine with 87% accuracy to support credit-risk, research, and investment-decision workflows</li>
+          <li>Automated Bloomberg and YODA reporting pipelines, improving operational efficiency by 75% across research and risk reporting</li>
+          <li>Delivered predictive pipelines and executive Tableau reporting for mutual fund and equity forecasting, improving forecast accuracy by 33%</li>
         </ul>
       </div>
     </div>
@@ -986,9 +1018,10 @@
         <div class="exp-company">Accenture</div>
         <div class="exp-role">Data Analyst · OP Financial, Allianz Bank</div>
         <ul class="exp-bullets">
-          <li>Designed ML credit/debit limit optimization (OP Financial) driving 23% revenue growth and 40% efficiency lift</li>
-          <li>Built XGBoost churn prediction (F1 0.84) for Allianz; K-means customer segmentation for targeted campaigns</li>
-          <li>Ran A/B tests, causal analysis, and standardized model validation — 90% analytical accuracy improvement</li>
+          <li>Built ML credit and debit limit optimization for OP Financial, driving 23% revenue growth, 40% efficiency improvement, and stronger profitability decisions</li>
+          <li>Developed XGBoost churn and segmentation models for Allianz Bank, paired with Tableau and Power BI dashboards for executive decision-making</li>
+          <li>Supported banking analytics modernization across AWS, BI, and reporting workflows, improving scalability, stakeholder visibility, and delivery speed</li>
+          <li>Ran experimentation, interpretability, and model-validation work that improved analytical accuracy by 90% across client programs</li>
         </ul>
       </div>
     </div>
@@ -1243,6 +1276,14 @@
       <p class="contact-head">
         Open to AI/ML roles, GenAI collaborations, and teams building models that <em>actually move the needle</em>.
       </p>
+
+      <div class="terminal-prompt">&gt; download resume</div>
+      <div class="contact-actions">
+        <a class="resume-cta" href="assets/Ayush_Resume_FT_Data_Science.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+          <span>Download Resume</span>
+        </a>
+      </div>
 
       <div class="terminal-prompt">&gt; get in touch</div>
     </div>
