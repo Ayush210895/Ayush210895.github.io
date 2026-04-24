@@ -553,6 +553,13 @@
   .github-card-links a:hover {
     color: var(--cyan);
   }
+  .github-card-links span {
+    color: var(--text-faint);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
   .repo-chips {
     display: flex;
     flex-wrap: wrap;
@@ -761,16 +768,26 @@
     color: var(--text);
     transition: all 0.2s;
   }
+  .contact-item {
+    background: var(--panel);
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--text);
+  }
   .contact-list a:hover {
     background: var(--panel-2);
     padding-left: 28px;
   }
-  .contact-list a .ico {
+  .contact-list a .ico,
+  .contact-item .ico {
     color: var(--blue-bright);
     width: 18px; height: 18px;
     flex-shrink: 0;
   }
-  .contact-list a .lbl {
+  .contact-list a .lbl,
+  .contact-item .lbl {
     font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
     color: var(--text-faint);
@@ -778,13 +795,15 @@
     text-transform: uppercase;
     min-width: 80px;
   }
-  .contact-list a .val {
+  .contact-list a .val,
+  .contact-item .val {
     font-size: 14px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .contact-list a .ext {
+  .contact-list a .ext,
+  .contact-item .ext {
     margin-left: auto;
     color: var(--text-dim);
     flex-shrink: 0;
@@ -869,12 +888,13 @@
 
   <div class="hero-grid">
     <p class="hero-bio">
-      Senior Data Scientist building AI, forecasting, NLP, and GenAI systems for real business decisions. My strongest work lives in industry settings: enterprise pricing, executive analytics, credit risk, market prediction, and natural-language access to production data.
+      Senior Data Scientist building AI, ML, and financial analytics systems across technology and financial services. My strongest work lives in industry settings: enterprise pricing, executive analytics, credit risk, market prediction, and natural-language access to production data.
     </p>
     <div class="hero-meta">
       <div>📍 <span>Denver, Colorado</span></div>
       <div>🏢 <span>EchoStar Corporation</span></div>
       <div>🎓 <span>Northeastern · M.S. Data Analytics</span></div>
+      <div>↔ <span>Open to Relocate</span></div>
     </div>
   </div>
 
@@ -981,9 +1001,9 @@
     <span class="num">// 02 — SELECTED_WORK</span>
     <span class="line"></span>
   </div>
-  <h2 class="section-title reveal">Industry work first<span>.</span></h2>
+  <h2 class="section-title reveal">AI, ML, and finance work first<span>.</span></h2>
   <p class="section-copy reveal">
-    These are the projects that best represent the level I work at professionally. Public GitHub repositories matter, but they are supporting proof below — not the center of the story.
+    These are the projects that best represent the level I work at professionally across AI/ML, GenAI, and financial analytics. Public repositories and hands-on projects matter too, but they support the industry story below rather than replacing it.
   </p>
 
   <div class="projects">
@@ -1041,10 +1061,10 @@
   </div>
 
   <div class="github-subsection reveal">
-    <div class="github-kicker">// Public GitHub Work</div>
-    <h3 class="github-title">Selected repositories that support the portfolio.</h3>
+    <div class="github-kicker">// Public GitHub + Applied Projects</div>
+    <h3 class="github-title">Selected repositories and hands-on projects that support the portfolio.</h3>
     <p class="github-copy">
-      These repos are public and reviewable today. They complement the industry work above, especially the projects I have already cleaned up into more production-ready structures.
+      These repos and applied projects are the secondary proof layer. They show hands-on work in forecasting, recommender systems, anomaly detection, and custom model implementation without pulling focus away from the industry projects above.
     </p>
 
     <div class="github-grid">
@@ -1099,6 +1119,19 @@
           <a href="https://github.com/Ayush210895/Space-Race-Visualisation" target="_blank" rel="noopener">Repo</a>
         </div>
       </div>
+
+      <div class="github-card">
+        <div class="github-card-head">
+          <div class="github-card-id">[AP-05] · FRAUD ANALYTICS</div>
+          <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </div>
+        <div class="github-card-name">Anomaly Detection in Credit Card Transactions</div>
+        <div class="github-card-tag">Fraud Detection · Applied ML</div>
+        <p class="github-card-desc">Designed a fraud-monitoring workflow over 29,000+ credit card transactions using Python and Power BI, with anomaly detection logic and alerting-oriented analysis for financial risk teams.</p>
+        <div class="github-card-links">
+          <span>Case Project</span>
+        </div>
+      </div>
     </div>
 
     <div class="repo-chips">
@@ -1120,27 +1153,27 @@
 
   <div class="stack-grid reveal">
     <div class="stack-col">
-      <h4>Languages</h4>
+      <h4>Programming & Data</h4>
       <div class="items">
-        <span>Python</span><span>SQL</span><span>DAX</span><span>Power Query (M)</span>
+        <span>Python</span><span>SQL</span><span>R</span><span>PySpark</span><span>DAX</span><span>Power Query</span>
       </div>
     </div>
     <div class="stack-col">
-      <h4>AI / ML</h4>
+      <h4>AI / ML & Finance</h4>
       <div class="items">
-        <span>XGBoost</span><span>PyTorch</span><span>FinBERT</span><span>scikit-learn</span><span>Time-Series</span><span>NLP</span>
+        <span>XGBoost</span><span>PyTorch</span><span>FinBERT</span><span>Forecasting</span><span>Credit Risk</span><span>Recommenders</span>
       </div>
     </div>
     <div class="stack-col">
-      <h4>Data Platforms</h4>
+      <h4>MLOps & Cloud</h4>
       <div class="items">
-        <span>Snowflake</span><span>Databricks</span><span>Snowflake Cortex</span><span>Azure</span><span>Alteryx</span>
+        <span>MLflow</span><span>Docker</span><span>Airflow</span><span>AWS</span><span>GCP</span><span>Azure</span>
       </div>
     </div>
     <div class="stack-col">
-      <h4>Analytics</h4>
+      <h4>BI & Engineering</h4>
       <div class="items">
-        <span>Tableau</span><span>Power BI</span><span>LOD Calculations</span><span>A/B Testing</span>
+        <span>Tableau</span><span>Power BI</span><span>Alteryx</span><span>ETL / ELT</span><span>Bloomberg</span><span>Git / CI/CD</span>
       </div>
     </div>
   </div>
@@ -1176,17 +1209,18 @@
       <div class="award-chips">
         <span>Ace Award</span>
         <span>Top SQL 50</span>
+        <span>Beijing AQI Project Recognition</span>
+        <span>Accenture Q2 FY20 Team Award</span>
       </div>
     </div>
 
     <div>
       <div class="creds-head">CERTIFICATIONS</div>
       <ul class="cert-list">
-        <li><span class="idx">[01]</span><span>The Nuts and Bolts of Machine Learning</span></li>
-        <li><span class="idx">[02]</span><span>Google AI Essentials</span></li>
-        <li><span class="idx">[03]</span><span>Data Analysis with Spreadsheets and SQL</span></li>
-        <li><span class="idx">[04]</span><span>Introducing AI</span></li>
-        <li><span class="idx">[05]</span><span>Python Data Analytics</span></li>
+        <li><span class="idx">[01]</span><span>Meta Data Analyst</span></li>
+        <li><span class="idx">[02]</span><span>Google Advanced Data Analytics</span></li>
+        <li><span class="idx">[03]</span><span>Data Visualization in Tableau & Power BI</span></li>
+        <li><span class="idx">[04]</span><span>Machine Learning Coursework Recognition</span></li>
       </ul>
     </div>
   </div>
@@ -1237,6 +1271,12 @@
         <span class="val">linkedin.com/in/ayush218</span>
         <svg class="ext" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
       </a>
+      <div class="contact-item">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
+        <span class="lbl">STATUS</span>
+        <span class="val">Open to Relocate</span>
+        <svg class="ext" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </div>
     </div>
   </div>
 </section>
