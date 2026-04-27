@@ -497,12 +497,19 @@
     padding: 24px;
     transition: all 0.3s;
   }
+  .github-card[data-href] {
+    cursor: pointer;
+  }
   .github-card.featured {
     grid-column: 1 / -1;
     border-color: rgba(77, 142, 255, 0.35);
     background:
       linear-gradient(135deg, rgba(77, 142, 255, 0.11), transparent 42%),
       var(--panel);
+  }
+  .github-card:focus-visible {
+    outline: 2px solid var(--blue-bright);
+    outline-offset: 4px;
   }
   .github-card:hover {
     border-color: var(--blue);
@@ -1108,7 +1115,7 @@
     </p>
 
     <div class="github-grid">
-      <div class="github-card featured">
+      <div class="github-card featured" data-href="https://github.com/Ayush210895/Credit-Card-Anomaly-Detection" aria-label="Open Credit Card Anomaly Detection repository">
         <div class="github-card-head">
           <div class="github-card-id">[GH-01] · FRAUD ANALYTICS</div>
           <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -1121,7 +1128,7 @@
         </div>
       </div>
 
-      <div class="github-card">
+      <div class="github-card" data-href="https://github.com/Ayush210895/Machine-Learning-From-Scratch" aria-label="Open Machine Learning From Scratch repository">
         <div class="github-card-head">
           <div class="github-card-id">[GH-02] · ML FOUNDATION</div>
           <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -1136,7 +1143,7 @@
         </div>
       </div>
 
-      <div class="github-card">
+      <div class="github-card" data-href="https://github.com/Ayush210895/Amazon-Recommendation-System" aria-label="Open Amazon Recommendation System repository">
         <div class="github-card-head">
           <div class="github-card-id">[GH-03] · RECOMMENDERS</div>
           <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -1149,7 +1156,7 @@
         </div>
       </div>
 
-      <div class="github-card">
+      <div class="github-card" data-href="https://github.com/Ayush210895/Beijing-AQI-Prediction" aria-label="Open Beijing AQI Prediction repository">
         <div class="github-card-head">
           <div class="github-card-id">[GH-04] · CUSTOM ML</div>
           <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -1162,7 +1169,7 @@
         </div>
       </div>
 
-      <div class="github-card">
+      <div class="github-card" data-href="https://github.com/Ayush210895/Portfolio-Risk-PCA-From-Scratch" aria-label="Open Portfolio Risk PCA From Scratch repository">
         <div class="github-card-head">
           <div class="github-card-id">[GH-05] · QUANT FINANCE</div>
           <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -1175,7 +1182,7 @@
         </div>
       </div>
 
-      <div class="github-card">
+      <div class="github-card" data-href="https://github.com/Ayush210895/Human-Activity-Monitoring" aria-label="Open Human Activity Monitoring repository">
         <div class="github-card-head">
           <div class="github-card-id">[GH-06] · TIME SERIES</div>
           <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -1188,7 +1195,7 @@
         </div>
       </div>
 
-      <div class="github-card">
+      <div class="github-card" data-href="https://github.com/Ayush210895/Space-Race-Visualisation" aria-label="Open Space Race Visualisation repository">
         <div class="github-card-head">
           <div class="github-card-id">[GH-07] · VISUALIZATION</div>
           <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -1510,6 +1517,30 @@
 
   // ===== Year =====
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===== Clickable GitHub project cards =====
+  (function() {
+    const cards = document.querySelectorAll('.github-card[data-href]');
+    cards.forEach(card => {
+      card.setAttribute('role', 'link');
+      card.setAttribute('tabindex', '0');
+
+      function openCard() {
+        window.open(card.dataset.href, '_blank', 'noopener,noreferrer');
+      }
+
+      card.addEventListener('click', (event) => {
+        if (event.target.closest('a')) return;
+        openCard();
+      });
+
+      card.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        openCard();
+      });
+    });
+  })();
 
   // ===== Scroll reveal =====
   (function() {
