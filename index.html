@@ -14,13 +14,13 @@
   :root {
     --bg:        #050814;
     --bg-2:      #07091a;
-    --panel:     #0a1228;
-    --panel-2:   #0d1833;
-    --line:      #16213d;
-    --line-soft: #0f1a30;
+    --panel:     #081126;
+    --panel-2:   #0b1732;
+    --line:      #213050;
+    --line-soft: #162440;
     --text:      #e6ecf7;
-    --text-dim:  #8a9bb8;
-    --text-faint:#4a5a7a;
+    --text-dim:  #b0bdd2;
+    --text-faint:#73829e;
     --blue:      #4d8eff;
     --blue-bright:#6ea3ff;
     --cyan:      #00e0ff;
@@ -42,6 +42,17 @@
     position: relative;
   }
 
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 18%, rgba(5, 8, 20, 0.42), transparent 64%),
+      linear-gradient(180deg, rgba(5, 8, 20, 0.48), rgba(5, 8, 20, 0.72));
+  }
+
   ::selection { background: var(--blue); color: var(--bg); }
 
   /* Neural network canvas */
@@ -60,7 +71,7 @@
     position: fixed;
     border-radius: 50%;
     filter: blur(90px);
-    opacity: 0.35;
+    opacity: 0.24;
     pointer-events: none;
     z-index: 0;
   }
@@ -73,7 +84,7 @@
     width: 400px; height: 400px;
     background: radial-gradient(circle, var(--cyan), transparent 70%);
     top: 40%; right: -10%;
-    opacity: 0.2;
+    opacity: 0.14;
   }
 
   main { position: relative; z-index: 2; }
@@ -87,7 +98,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 18px 40px;
-    background: rgba(5, 8, 20, 0.7);
+    background: rgba(5, 8, 20, 0.88);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--line);
@@ -149,6 +160,7 @@
     align-items: center;
     gap: 10px;
     opacity: 0; animation: fadeUp 0.8s 0.1s forwards;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75);
   }
   .status .live {
     width: 8px; height: 8px; border-radius: 50%;
@@ -164,6 +176,7 @@
     letter-spacing: -0.03em;
     margin-bottom: 48px;
     opacity: 0; animation: fadeUp 1s 0.2s forwards;
+    text-shadow: 0 12px 40px rgba(0, 0, 0, 0.78);
   }
   h1.hero-title em {
     font-style: italic;
@@ -189,6 +202,7 @@
     line-height: 1.7;
     color: var(--text);
     opacity: 0; animation: fadeUp 1s 0.4s forwards;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.82);
   }
   .hero-meta {
     font-family: 'JetBrains Mono', monospace;
@@ -200,6 +214,7 @@
     flex-direction: column;
     gap: 6px;
     opacity: 0; animation: fadeUp 1s 0.5s forwards;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
   }
   .hero-meta span { color: var(--blue-bright); }
 
@@ -208,7 +223,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     border: 1px solid var(--line);
-    background: var(--panel);
+    background: rgba(8, 17, 38, 0.94);
     backdrop-filter: blur(8px);
     margin-top: 80px;
     opacity: 0; animation: fadeUp 1s 0.6s forwards;
@@ -374,7 +389,7 @@
     .projects { grid-template-columns: 1fr; }
   }
   .project {
-    background: var(--panel);
+    background: rgba(8, 17, 38, 0.96);
     border: 1px solid var(--line);
     padding: 32px;
     position: relative;
@@ -492,7 +507,7 @@
     .github-grid { grid-template-columns: 1fr; }
   }
   .github-card {
-    background: var(--panel);
+    background: rgba(8, 17, 38, 0.96);
     border: 1px solid var(--line);
     padding: 24px;
     transition: all 0.3s;
@@ -505,7 +520,7 @@
     border-color: rgba(77, 142, 255, 0.35);
     background:
       linear-gradient(135deg, rgba(77, 142, 255, 0.11), transparent 42%),
-      var(--panel);
+      rgba(8, 17, 38, 0.97);
   }
   .github-card:focus-visible {
     outline: 2px solid var(--blue-bright);
