@@ -188,13 +188,13 @@
   }
   .hero-grid {
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 60px;
+    grid-template-columns: minmax(0, 1fr) 220px auto;
+    gap: 34px;
     align-items: end;
     margin-top: 40px;
   }
   @media (max-width: 768px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 32px; }
   }
   .hero-bio {
     max-width: 520px;
@@ -217,6 +217,40 @@
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
   }
   .hero-meta span { color: var(--blue-bright); }
+  .hero-portrait {
+    width: min(220px, 48vw);
+    aspect-ratio: 4 / 5;
+    justify-self: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(110, 163, 255, 0.55);
+    background: rgba(8, 17, 38, 0.7);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.42), 0 0 34px rgba(77, 142, 255, 0.16);
+    opacity: 0;
+    animation: fadeUp 1s 0.45s forwards;
+  }
+  .hero-portrait::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border: 1px solid rgba(0, 224, 255, 0.18);
+    box-shadow: inset 0 0 34px rgba(5, 8, 20, 0.18);
+  }
+  .hero-portrait img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: 50% 34%;
+    filter: saturate(0.9) contrast(1.05);
+  }
+  @media (max-width: 768px) {
+    .hero-portrait {
+      justify-self: start;
+      width: min(190px, 62vw);
+    }
+  }
 
   /* Impact metrics */
   .metrics {
@@ -951,6 +985,9 @@
     <p class="hero-bio">
       AI/ML engineer and senior data scientist building intelligent systems across technology and financial services. My strongest work lives in industry settings: enterprise pricing, executive analytics, credit risk, market prediction, and natural-language access to production data.
     </p>
+    <figure class="hero-portrait" aria-label="Portrait of Ayush Soni">
+      <img src="assets/ayush-soni-profile.jpg" alt="Ayush Soni" />
+    </figure>
     <div class="hero-meta">
       <div>📍 <span>Denver, Colorado</span></div>
       <div>🏢 <span>EchoStar Corporation</span></div>
