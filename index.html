@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ayush Soni — AI/ML Engineer</title>
-<meta name="description" content="Ayush Soni · AI/ML Engineer · GenAI systems, finance ML, forecasting, NLP, and production analytics. Based in Denver, CO." />
+<title>Ayush Soni — Senior Data Scientist</title>
+<meta name="description" content="Ayush Soni · Senior Data Scientist · production ML, causal intelligence, GenAI systems, forecasting, NLP, and production analytics. Based in Denver, CO." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -311,6 +311,11 @@
     .metric:nth-child(2) { border-right: none; }
     .metric:nth-child(1), .metric:nth-child(2) { border-bottom: 1px solid var(--line); }
   }
+  @media (max-width: 480px) {
+    .metric {
+      padding: 22px 16px;
+    }
+  }
   .metric::before {
     content: '';
     position: absolute;
@@ -331,6 +336,11 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 10px;
+  }
+  @media (max-width: 480px) {
+    .metric .val {
+      font-size: 34px;
+    }
   }
   .metric .lbl {
     font-family: 'JetBrains Mono', monospace;
@@ -897,6 +907,7 @@
     text-decoration: none;
     color: var(--text);
     transition: all 0.2s;
+    min-width: 0;
   }
   .contact-item {
     background: var(--panel);
@@ -905,6 +916,7 @@
     align-items: center;
     gap: 14px;
     color: var(--text);
+    min-width: 0;
   }
   .contact-list a:hover {
     background: var(--panel-2);
@@ -925,9 +937,25 @@
     text-transform: uppercase;
     min-width: 80px;
   }
+  @media (max-width: 480px) {
+    .contact-list a,
+    .contact-item {
+      padding: 16px;
+      gap: 10px;
+    }
+    .contact-list a:hover {
+      padding-left: 18px;
+    }
+    .contact-list a .lbl,
+    .contact-item .lbl {
+      min-width: 56px;
+      letter-spacing: 0.08em;
+    }
+  }
   .contact-list a .val,
   .contact-item .val {
     font-size: 14px;
+    min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -990,7 +1018,7 @@
     <span class="dot"></span>
     <span>AYUSH SONI</span>
     <span style="color: var(--text-faint)">/</span>
-    <span>AI/ML ENGINEER</span>
+    <span>SENIOR DATA SCIENTIST</span>
   </div>
   <div class="links">
     <a href="#experience">experience</a>
@@ -1015,10 +1043,10 @@
         <span id="typed"></span><span style="background: var(--blue-bright); width: 8px; height: 14px; display: inline-block; animation: pulse 1s infinite;"></span>
       </div>
       <h1 class="profile-name">Ayush Soni</h1>
-      <p class="profile-title">AI/ML Engineer</p>
+      <p class="profile-title">Senior Data Scientist</p>
       <div class="profile-pills" aria-label="Specialties">
-        <span>AI/ML Engineer</span>
-        <span>Finance ML</span>
+        <span>Production ML</span>
+        <span>Causal AI</span>
         <span>GenAI</span>
       </div>
     </div>
@@ -1026,7 +1054,7 @@
 
   <div class="hero-grid">
     <p class="hero-bio">
-      AI/ML engineer and senior data scientist building intelligent systems across technology and financial services. My strongest work lives in industry settings: enterprise pricing, executive analytics, credit risk, market prediction, and natural-language access to production data.
+      Senior Data Scientist building production ML, causal intelligence, and LLM-powered tools. My strongest work connects modeling, experimentation, and GenAI with real business decisions - from forecasting and lift measurement to NLP and natural-language analytics.
     </p>
     <div class="hero-meta">
       <div>📍 <span>Denver, Colorado</span></div>
@@ -1046,8 +1074,8 @@
       <div class="lbl">Enterprise agents</div>
     </div>
     <div class="metric">
-      <div class="val">Finance</div>
-      <div class="lbl">Risk and forecasting</div>
+      <div class="val">Causal</div>
+      <div class="lbl">Lift and forecasting</div>
     </div>
     <div class="metric">
       <div class="val">MLOps</div>
@@ -1074,10 +1102,12 @@
         <div class="exp-company">EchoStar Corporation</div>
         <div class="exp-role">Senior Data Scientist · prev. Sr. Data Analyst</div>
         <ul class="exp-bullets">
-          <li>Built forecasting, price-elasticity, and ROI optimization models supporting pricing decisions across 3,000+ retail locations and contributing to multi-million-dollar business impact</li>
-          <li>Developed Databricks-hosted GenAI agents and Snowflake Cortex workflows for natural-language access to enterprise data, reducing analytics turnaround by 70%</li>
-          <li>Improved forecast accuracy by 10-15% through feature engineering, model redesign, and production-grade analytics for executive planning</li>
-          <li>Resolved KPI and reporting data-quality issues to restore 100% reporting accuracy and automated pipelines for near real-time business visibility</li>
+          <li>Built a Snowflake Cortex AI promotional effectiveness agent that accepts natural-language inputs, runs statistical decomposition in Python, and returns structured pre/promo/post lift insights</li>
+          <li>Designed quasi-experimental pricing analyses that isolate incremental promotional lift after adjusting for weekday mix, seasonality, trend, and device-launch effects</li>
+          <li>Developed a causal demand-planning system using SARIMAX and XGBoost across sales channels, with pricing and promotion signals as model features</li>
+          <li>Deployed Text2SQL and GenAI reporting workflows with Snowflake Cortex AI and Databricks-hosted LLMs, reducing analytics turnaround time by 70%</li>
+          <li>Architected a Snowflake MLOps framework for dataset onboarding, staging validation, YAML-based promotion, monitoring, and feedback loops</li>
+          <li>Built executive analytics platform with Tableau and Snowflake, accelerating decision-making by 30% and reducing manual reporting effort by 40%</li>
         </ul>
       </div>
     </div>
@@ -1092,8 +1122,9 @@
         <div class="exp-role">Data Scientist</div>
         <ul class="exp-bullets">
           <li>Deployed ML regression models reducing forecast error by 20% and lifting operational efficiency 40%</li>
-          <li>Led enterprise data migration from Azure to Snowflake; optimized SQL and data models for scale</li>
-          <li>Built automated ETL pipelines (Alteryx + Snowflake) and Power BI dashboards for portfolio managers</li>
+          <li>Migrated enterprise data to Snowflake and automated repeatable ETL workflows for portfolio performance monitoring</li>
+          <li>Built Power BI dashboards with advanced DAX calculations surfacing investment-portfolio performance trends for managers</li>
+          <li>Partnered with operations teams to translate model outputs into resource-planning workflows</li>
         </ul>
       </div>
     </div>
@@ -1109,8 +1140,9 @@
         <ul class="exp-bullets">
           <li>Built XGBoost market-prediction pipelines on Bloomberg time-series data, reaching a 62.4% weekly hit rate for bond-market forecasting</li>
           <li>Developed a FinBERT-based sentiment engine with 87% accuracy to support credit-risk, research, and investment-decision workflows</li>
-          <li>Automated Bloomberg and YODA reporting pipelines, improving operational efficiency by 75% across research and risk reporting</li>
-          <li>Delivered predictive pipelines and executive Tableau reporting for mutual fund and equity forecasting, improving forecast accuracy by 33%</li>
+          <li>Designed predictive pipelines in Python and SQL to model equity performance and support quantitative trading research</li>
+          <li>Improved global mutual fund forecasting accuracy by 33% through feature engineering and validation on Bloomberg datasets</li>
+          <li>Automated Bloomberg and YODA reporting pipelines, improving operational efficiency across research and risk reporting</li>
         </ul>
       </div>
     </div>
@@ -1126,8 +1158,8 @@
         <ul class="exp-bullets">
           <li>Built ML credit and debit limit optimization for OP Financial, driving 23% revenue growth, 40% efficiency improvement, and stronger profitability decisions</li>
           <li>Developed XGBoost churn and segmentation models for Allianz Bank, paired with Tableau and Power BI dashboards for executive decision-making</li>
-          <li>Supported banking analytics modernization across AWS, BI, and reporting workflows, improving scalability, stakeholder visibility, and delivery speed</li>
-          <li>Ran experimentation, interpretability, and model-validation work that improved analytical accuracy by 90% across client programs</li>
+          <li>Ran A/B tests and statistical inference across credit/debit portfolios to improve segmentation and campaign response</li>
+          <li>Migrated DB2/Teradata workloads to AWS Cloud and standardized validation practices, improving analytical accuracy by 90%</li>
         </ul>
       </div>
     </div>
@@ -1140,9 +1172,9 @@
     <span class="num">02 - Selected Work</span>
     <span class="line"></span>
   </div>
-  <h2 class="section-title reveal">AI, ML, and finance systems<span>.</span></h2>
+  <h2 class="section-title reveal">Production AI and ML systems<span>.</span></h2>
   <p class="section-copy reveal">
-    A focused set of industry and public projects showing production ML, GenAI systems, finance analytics, recommender systems, and first-principles model implementation.
+    A focused set of industry and public projects showing production ML, GenAI systems, causal modeling, recommender systems, and first-principles model implementation.
   </p>
 
   <div class="projects">
@@ -1161,7 +1193,20 @@
 
     <div class="project reveal">
       <div class="project-head">
-        <div class="project-id">[02] · 2025</div>
+        <div class="project-id">[02] · 2026</div>
+        <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </div>
+      <div class="project-name">Financial RAG + LoRA Pipeline</div>
+      <div class="project-tag">RAG · LLM EVALUATION · IN PROGRESS</div>
+      <p class="project-desc">Retrieval-augmented Q&A system over financial documents with LoRA/PEFT fine-tuning, prompt evaluation, and LLM-as-judge scoring for faithfulness and relevance.</p>
+      <div class="project-stack">
+        <span>Hugging Face</span><span>LoRA / PEFT</span><span>RAG</span><span>LLM Evaluation</span>
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="project-head">
+        <div class="project-id">[03] · 2025</div>
         <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
       </div>
       <div class="project-name">Forecasting & Price Elasticity</div>
@@ -1174,7 +1219,7 @@
 
     <div class="project reveal">
       <div class="project-head">
-        <div class="project-id">[03] · 2024</div>
+        <div class="project-id">[04] · 2024</div>
         <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
       </div>
       <div class="project-name">Bond Market Predictor</div>
@@ -1187,7 +1232,7 @@
 
     <div class="project reveal">
       <div class="project-head">
-        <div class="project-id">[04] · 2023</div>
+        <div class="project-id">[05] · 2023</div>
         <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
       </div>
       <div class="project-name">FinBERT Sentiment Engine</div>
@@ -1345,15 +1390,15 @@
       </div>
     </div>
     <div class="stack-col">
-      <h4>AI / ML & Finance</h4>
+      <h4>AI / ML</h4>
       <div class="items">
-        <span>XGBoost</span><span>PyTorch</span><span>FinBERT</span><span>Forecasting</span><span>Credit Risk</span><span>Recommenders</span>
+        <span>XGBoost</span><span>SARIMAX</span><span>PyTorch</span><span>FinBERT</span><span>Causal Inference</span><span>Forecasting</span><span>Recommenders</span>
       </div>
     </div>
     <div class="stack-col">
-      <h4>MLOps & Cloud</h4>
+      <h4>GenAI / MLOps</h4>
       <div class="items">
-        <span>MLflow</span><span>Docker</span><span>Airflow</span><span>AWS</span><span>GCP</span><span>Azure</span>
+        <span>Snowflake Cortex</span><span>Text2SQL</span><span>Hugging Face</span><span>LoRA / PEFT</span><span>LLM Evaluation</span><span>MLflow</span><span>Docker</span><span>Airflow</span>
       </div>
     </div>
     <div class="stack-col">
@@ -1441,10 +1486,10 @@
       <div class="terminal-prompt">&gt; get in touch</div>
     </div>
     <div class="contact-list">
-      <a href="mailto:ayushsoni1.nmims@gmail.com">
+      <a href="mailto:ayush.so2156@gmail.com">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         <span class="lbl">EMAIL</span>
-        <span class="val">ayushsoni1.nmims@gmail.com</span>
+        <span class="val">ayush.so2156@gmail.com</span>
         <svg class="ext" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
       </a>
       <a href="tel:+18577019173">
