@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ayush Soni — Senior Data Scientist</title>
-<meta name="description" content="Ayush Soni · Senior Data Scientist · production ML, causal intelligence, GenAI systems, forecasting, NLP, and production analytics. Based in the United States." />
+<title>Ayush Soni - Senior Data Scientist</title>
+<meta name="description" content="Ayush Soni · Senior Data Scientist specializing in causal inference, GenAI agentic systems, Snowflake/Databricks, quant modeling, NLP, forecasting, and production ML." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -477,6 +477,10 @@
     min-height: 260px;
     display: flex;
     flex-direction: column;
+    cursor: default;
+  }
+  .project[data-href] {
+    cursor: pointer;
   }
   .project::before {
     content: '';
@@ -1043,7 +1047,7 @@
         <span id="typed"></span><span style="background: var(--blue-bright); width: 8px; height: 14px; display: inline-block; animation: pulse 1s infinite;"></span>
       </div>
       <h1 class="profile-name">Ayush Soni</h1>
-      <p class="profile-title">Senior Data Scientist</p>
+      <p class="profile-title">Senior Data Scientist - Causal Inference & GenAI Agentic Systems</p>
       <div class="profile-pills" aria-label="Specialties">
         <span>Production ML</span>
         <span>Causal AI</span>
@@ -1054,7 +1058,7 @@
 
   <div class="hero-grid">
     <p class="hero-bio">
-      Senior Data Scientist building production ML, causal intelligence, and LLM-powered tools. My strongest work connects modeling, experimentation, and GenAI with real business decisions - from forecasting and lift measurement to NLP and natural-language analytics.
+      Senior Data Scientist building causal inference systems and GenAI agents that defend the number behind the answer. My work connects experimentation, Snowflake/Databricks LLM workflows, forecasting, NLP, and production ML with business decisions that can survive scrutiny.
     </p>
     <div class="hero-meta">
       <div>📍 <span>United States</span></div>
@@ -1095,18 +1099,33 @@
   <div class="exp-list">
     <div class="exp-item reveal">
       <div>
-        <div class="exp-years">2024 — NOW</div>
+        <div class="exp-years">2026 — NOW</div>
         <div class="exp-location">Denver, CO</div>
       </div>
       <div>
         <div class="exp-company">EchoStar Corporation</div>
-        <div class="exp-role">Senior Data Scientist · prev. Sr. Data Analyst</div>
+        <div class="exp-role">Senior Data Scientist</div>
         <ul class="exp-bullets">
           <li>Built a Snowflake Cortex AI promotional effectiveness agent that accepts natural-language inputs, runs statistical decomposition in Python, and returns structured pre/promo/post lift insights</li>
           <li>Designed quasi-experimental pricing analyses that isolate incremental promotional lift after adjusting for weekday mix, seasonality, trend, and device-launch effects</li>
-          <li>Developed a causal demand-planning system using SARIMAX and XGBoost across sales channels, with pricing and promotion signals as model features</li>
           <li>Deployed Text2SQL and GenAI reporting workflows with Snowflake Cortex AI and Databricks-hosted LLMs, reducing analytics turnaround time by 70%</li>
           <li>Architected a Snowflake MLOps framework for dataset onboarding, staging validation, YAML-based promotion, monitoring, and feedback loops</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div>
+        <div class="exp-years">2024 — 2026</div>
+        <div class="exp-location">Denver, CO</div>
+      </div>
+      <div>
+        <div class="exp-company">EchoStar Corporation</div>
+        <div class="exp-role">Data Scientist</div>
+        <ul class="exp-bullets">
+          <li>Developed a causal demand-planning system using SARIMAX and XGBoost across Indirect, Web, and Walmart channels, exceeding a 75% N-4 forecast-accuracy target</li>
+          <li>Architected a centralized causal feature layer integrating Snowflake pricing and promotion data to power elasticity-aware forecasting and pricing strategy</li>
+          <li>Built Databricks-hosted GenAI workflows enabling natural-language KPI queries and automated executive reporting, reducing analytics turnaround time by 70%</li>
           <li>Built executive analytics platform with Tableau and Snowflake, accelerating decision-making by 30% and reducing manual reporting effort by 40%</li>
         </ul>
       </div>
@@ -1191,16 +1210,16 @@
       </div>
     </div>
 
-    <div class="project reveal">
+    <div class="project reveal" data-href="https://github.com/Ayush210895/financial-doc-agent" aria-label="Open Financial Document Intelligence Agent repository">
       <div class="project-head">
         <div class="project-id">[02] · 2026</div>
         <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
       </div>
-      <div class="project-name">Financial RAG + LoRA Pipeline</div>
-      <div class="project-tag">RAG · LLM EVALUATION · IN PROGRESS</div>
-      <p class="project-desc">Retrieval-augmented Q&A system over financial documents with LoRA/PEFT fine-tuning, prompt evaluation, and LLM-as-judge scoring for faithfulness and relevance.</p>
+      <div class="project-name">Financial Document Intelligence Agent</div>
+      <div class="project-tag">AGENTIC RAG · TEXT2SQL · EVALUATION</div>
+      <p class="project-desc">Agentic AI system combining RAG over SEC filings with structured financial data. Built with FAISS retrieval, cross-encoder reranking, Claude tool-calling, Text2SQL, LLM-as-judge evaluation, FastAPI, Docker, and a Streamlit demo UI.</p>
       <div class="project-stack">
-        <span>Hugging Face</span><span>LoRA / PEFT</span><span>RAG</span><span>LLM Evaluation</span>
+        <span>FAISS</span><span>Reranking</span><span>Text2SQL</span><span>FastAPI</span><span>Docker</span>
       </div>
     </div>
 
@@ -1248,13 +1267,26 @@
     <div class="github-kicker">Public GitHub and Applied Projects</div>
     <h3 class="github-title">Finance, ML, and first-principles projects.</h3>
     <p class="github-copy">
-      Public repositories that prove the hands-on story behind the industry work: fraud analytics, custom ML models, recommender systems, and quant-style risk modeling.
+      Public repositories that prove the hands-on story behind the industry work: agentic RAG, fraud analytics, custom ML models, recommender systems, and quant-style risk modeling.
     </p>
 
     <div class="github-grid">
-      <div class="github-card featured" data-href="https://github.com/Ayush210895/Credit-Card-Anomaly-Detection" aria-label="Open Credit Card Anomaly Detection repository">
+      <div class="github-card featured" data-href="https://github.com/Ayush210895/financial-doc-agent" aria-label="Open Financial Document Intelligence Agent repository">
         <div class="github-card-head">
-          <div class="github-card-id">[GH-01] · FRAUD ANALYTICS</div>
+          <div class="github-card-id">[GH-01] · AGENTIC RAG</div>
+          <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </div>
+        <div class="github-card-name">Financial Document Intelligence Agent</div>
+        <div class="github-card-tag">RAG · Text2SQL · Tool Calling · Evaluation</div>
+        <p class="github-card-desc">Agentic AI system over financial filings and structured data, with reranked retrieval, Claude tool-calling, SQL grounding, automated evaluation, FastAPI service, Docker packaging, and Streamlit demo.</p>
+        <div class="github-card-links">
+          <a href="https://github.com/Ayush210895/financial-doc-agent" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+
+      <div class="github-card" data-href="https://github.com/Ayush210895/Credit-Card-Anomaly-Detection" aria-label="Open Credit Card Anomaly Detection repository">
+        <div class="github-card-head">
+          <div class="github-card-id">[GH-02] · FRAUD ANALYTICS</div>
           <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
         </div>
         <div class="github-card-name">Anomaly Detection in Credit Card Transactions</div>
@@ -1267,7 +1299,7 @@
 
       <div class="github-card" data-href="https://github.com/Ayush210895/Machine-Learning-From-Scratch" aria-label="Open Machine Learning From Scratch repository">
         <div class="github-card-head">
-          <div class="github-card-id">[GH-02] · ML FOUNDATION</div>
+          <div class="github-card-id">[GH-03] · ML FOUNDATION</div>
           <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
         </div>
         <div class="github-card-name">Machine Learning From Scratch</div>
@@ -1282,7 +1314,7 @@
 
       <div class="github-card" data-href="https://github.com/Ayush210895/Amazon-Recommendation-System" aria-label="Open Amazon Recommendation System repository">
         <div class="github-card-head">
-          <div class="github-card-id">[GH-03] · RECOMMENDERS</div>
+          <div class="github-card-id">[GH-04] · RECOMMENDERS</div>
           <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
         </div>
         <div class="github-card-name">Amazon Recommendation System</div>
@@ -1295,7 +1327,7 @@
 
       <div class="github-card" data-href="https://github.com/Ayush210895/Beijing-AQI-Prediction" aria-label="Open Beijing AQI Prediction repository">
         <div class="github-card-head">
-          <div class="github-card-id">[GH-04] · CUSTOM ML</div>
+          <div class="github-card-id">[GH-05] · CUSTOM ML</div>
           <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
         </div>
         <div class="github-card-name">Beijing AQI Prediction</div>
@@ -1308,7 +1340,7 @@
 
       <div class="github-card" data-href="https://github.com/Ayush210895/Portfolio-Risk-PCA-From-Scratch" aria-label="Open Portfolio Risk PCA From Scratch repository">
         <div class="github-card-head">
-          <div class="github-card-id">[GH-05] · QUANT FINANCE</div>
+          <div class="github-card-id">[GH-06] · QUANT FINANCE</div>
           <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
         </div>
         <div class="github-card-name">Portfolio Risk PCA From Scratch</div>
@@ -1321,7 +1353,7 @@
 
       <div class="github-card" data-href="https://github.com/Ayush210895/multi-agent-dev-system" aria-label="Open multi-agent development system repository">
         <div class="github-card-head">
-          <div class="github-card-id">[GH-06] · GENAI TOOLING</div>
+          <div class="github-card-id">[GH-07] · GENAI TOOLING</div>
           <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
         </div>
         <div class="github-card-name">Multi-Agent Dev System</div>
@@ -1334,7 +1366,7 @@
 
       <div class="github-card" data-href="https://github.com/Ayush210895/Human-Activity-Monitoring" aria-label="Open Human Activity Monitoring repository">
         <div class="github-card-head">
-          <div class="github-card-id">[GH-07] · TIME SERIES</div>
+          <div class="github-card-id">[GH-08] · TIME SERIES</div>
           <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
         </div>
         <div class="github-card-name">Human Activity Monitoring</div>
@@ -1347,7 +1379,7 @@
 
       <div class="github-card" data-href="https://github.com/Ayush210895/Space-Race-Visualisation" aria-label="Open Space Race Visualisation repository">
         <div class="github-card-head">
-          <div class="github-card-id">[GH-08] · VISUALIZATION</div>
+          <div class="github-card-id">[GH-09] · VISUALIZATION</div>
           <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
         </div>
         <div class="github-card-name">Space Race Visualisation</div>
@@ -1360,6 +1392,7 @@
     </div>
 
     <div class="repo-chips">
+      <a href="https://github.com/Ayush210895/financial-doc-agent" target="_blank" rel="noopener">Financial Doc Agent</a>
       <a href="https://github.com/Ayush210895/Credit-Card-Anomaly-Detection" target="_blank" rel="noopener">Credit Card Anomaly</a>
       <a href="https://github.com/Ayush210895/Machine-Learning-From-Scratch" target="_blank" rel="noopener">ML From Scratch</a>
       <a href="https://github.com/Ayush210895/Amazon-Recommendation-System" target="_blank" rel="noopener">Amazon Recommender</a>
@@ -1398,7 +1431,7 @@
     <div class="stack-col">
       <h4>GenAI / MLOps</h4>
       <div class="items">
-        <span>Snowflake Cortex</span><span>Text2SQL</span><span>Hugging Face</span><span>LoRA / PEFT</span><span>LLM Evaluation</span><span>MLflow</span><span>Docker</span><span>Airflow</span>
+        <span>Snowflake Cortex</span><span>Text2SQL</span><span>Tool Calling</span><span>RAG</span><span>LLM Evaluation</span><span>MLflow</span><span>Docker</span><span>Airflow</span>
       </div>
     </div>
     <div class="stack-col">
@@ -1470,14 +1503,14 @@
       <div class="terminal-dots"><span></span><span></span><span></span></div>
     </div>
     <div class="terminal-body">
-      <div class="terminal-prompt">&gt; open to work</div>
+      <div class="terminal-prompt">&gt; current focus</div>
       <p class="contact-head">
-        Open to AI/ML roles, GenAI collaborations, and teams building models that <em>actually move the needle</em>.
+        Open to Senior Data Scientist, ML Engineer, and AI-native teams where causal rigor and GenAI engineering both matter.
       </p>
 
       <div class="terminal-prompt">&gt; download resume</div>
       <div class="contact-actions">
-        <a class="resume-cta" href="assets/Ayush_Resume_FT_Data_Science.pdf" download>
+        <a class="resume-cta" href="assets/Ayush_Soni_Resume_BigTech_Generalist.pdf" download>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
           <span>Download Resume</span>
         </a>
@@ -1675,9 +1708,9 @@
   // ===== Year =====
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // ===== Clickable GitHub project cards =====
+  // ===== Clickable project cards =====
   (function() {
-    const cards = document.querySelectorAll('.github-card[data-href]');
+    const cards = document.querySelectorAll('.github-card[data-href], .project[data-href]');
     cards.forEach(card => {
       card.setAttribute('role', 'link');
       card.setAttribute('tabindex', '0');
